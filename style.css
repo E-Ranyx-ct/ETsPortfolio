@@ -60,6 +60,21 @@ section { display: flex; flex-direction: column; align-items: center; justify-co
 }
 
 /* =========================================
+   手機版專屬放大設定 (針對觸控螢幕/手機裝置)
+   ========================================= */
+@media (max-device-width: 896px), (pointer: coarse) {
+    .simple-header {
+        padding: 30px 40px; /* 加大上下間距，讓導航欄變寬 */
+    }
+    .simple-nav {
+        gap: 35px; /* 加大按鈕之間的距離，避免太擁擠 */
+    }
+    .simple-nav a {
+        font-size: 1.5rem; /* 將字體大幅放大，讓手機縮小後也清晰可見 */
+    }
+}
+
+/* =========================================
    Section 1: Hero (GIF背景 + 導覽按鈕)
    ========================================= */
    #hero {
