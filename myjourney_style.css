@@ -84,8 +84,8 @@ body {
     font-weight: 700;
     z-index: 0;
 }
-.left .year-label { left: -20px; top: 10px; }
-.right .year-label { right: -20px; top: 10px; }
+.left .year-label { left: -5px; top: 10px; }
+.right .year-label { right: -5px; top: 10px; }
 
 /* 內容卡片 */
 .content {
