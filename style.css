@@ -64,13 +64,13 @@ section { display: flex; flex-direction: column; align-items: center; justify-co
    ========================================= */
 @media (max-device-width: 896px), (pointer: coarse) {
     .simple-header {
-        padding: 30px 40px; /* 加大上下間距，讓導航欄變寬 */
+        padding: 40px 50px; /* 再次加大上下間距，配合更大的字體 */
     }
     .simple-nav {
-        gap: 35px; /* 加大按鈕之間的距離，避免太擁擠 */
+        gap: 45px; /* 加大按鈕之間的距離，避免太擁擠 */
     }
     .simple-nav a {
-        font-size: 1.5rem; /* 將字體大幅放大，讓手機縮小後也清晰可見 */
+        font-size: 1.2rem;
     }
 }
 
