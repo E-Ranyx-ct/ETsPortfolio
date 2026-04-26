@@ -182,6 +182,9 @@
 
     <div class="footer-text">To be continued...</div>
 
+    <!-- 回到頂部按鈕 -->
+    <button id="backToTop" class="back-to-top" title="Go to top">↑</button>
+
     <!-- 加入 JS 監聽滑動事件，滑到才顯示動畫 -->
     <script>
         const observer = new IntersectionObserver((entries) => {
@@ -195,6 +198,19 @@
         // 選擇所有要滑動出現的元素 (標題、時間軸項目、底部打字文字)
         document.querySelectorAll('.animate-title, .footer-text').forEach(el => {
             observer.observe(el);
+        });
+
+        // 回到頂部按鈕功能
+        const backToTopBtn = document.getElementById('backToTop');
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 300) { // 當往下捲動超過 300px 時顯示按鈕
+                backToTopBtn.classList.add('show');
+            } else {
+                backToTopBtn.classList.remove('show');
+            }
+        });
+        backToTopBtn.addEventListener('click', () => {
+            window.scrollTo({ top: 0, behavior: 'smooth' }); // 平滑捲動到最上方
         });
     </script>
 </body>
