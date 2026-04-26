@@ -1,0 +1,184 @@
+:root {
+    --main-pink: #E58B9D;
+    --light-pink: #FEECEF;
+    --timeline-line: #F6B5C0;
+    --text-dark: #555;
+    --year-color: #D6D6D6;
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+body {
+    font-family: 'Noto Sans TC', sans-serif;
+    background-color: var(--light-pink);
+    color: var(--text-dark);
+    overflow-x: hidden;
+}
+
+
+
+/* 標題區 */
+.header {
+    text-align: center;
+    padding: 60px 0;
+}
+.header img { max-width: 280px; }
+
+/* --- 時間軸主體 --- */
+.timeline-container {
+    position: relative;
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 40px 0;
+}
+
+/* 中間那條粉紅線 */
+.timeline-container::after {
+    content: '';
+    position: absolute;
+    width: 3px;
+    background-color: var(--timeline-line);
+    top: 0; bottom: 0;
+    left: 50%;
+    margin-left: -1.5px;
+    z-index: 0;
+}
+
+/* 時間軸上的每一個項目 */
+.timeline-item {
+    padding: 10px 40px;
+    position: relative;
+    background-color: inherit;
+    width: 50%;
+}
+
+/* 軸線上的圓點 */
+.timeline-item::after {
+    content: '';
+    position: absolute;
+    width: 12px;
+    height: 12px;
+    right: -9px; /* 靠右對齊中線 */
+    background-color: #F6B5C0;
+    border: 3px solid var(--timeline-line);
+    top: 25px;
+    border-radius: 50%;
+    z-index: 1;
+}
+
+/* 左側項目 */
+.left { left: 0; text-align: right; }
+
+/* 右側項目 */
+.right { left: 50%; text-align: left; }
+
+.right::after { left: -9px; } /* 點點改到左邊 */
+
+/* 年份標籤 (2021, 2022...) */
+.year-label {
+    position: absolute;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 2.5rem;
+    color: var(--year-color);
+    opacity: 0.5;
+    font-weight: 700;
+    z-index: 0;
+}
+.left .year-label { left: -80px; top: 10px; }
+.right .year-label { right: -80px; top: 10px; }
+
+/* 內容卡片 */
+.content {
+        padding: 5px 0; /* 縮小卡片內的上下留白，讓整體更緊湊 */
+    position: relative;
+}
+
+.date-text {
+    color: var(--main-pink);
+    font-weight: bold;
+    font-family: 'Montserrat', sans-serif;
+    margin-bottom: 5px;
+    display: block;
+}
+
+.title-zh { font-weight: 700; font-size: 1.1rem; margin-bottom: 5px; color: #333; }
+.title-en { font-size: 0.85rem; color: #888; line-height: 1.4; margin-bottom: 10px; }
+
+/* 圓形圖片 */
+.event-img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 4px solid white;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    margin: 10px 0;
+}
+.left .event-img { margin-left: auto; }
+
+/* 底部結束文字 */
+.footer-text {
+    text-align: center;
+    padding: 80px 0;
+    font-family: 'Montserrat', sans-serif;
+    color: var(--main-pink);
+    font-size: 1.5rem;
+    font-weight: bold;
+    position: relative;
+    width: max-content;
+    margin: 0 auto;
+    line-height: 0.1; /* 縮小行高，讓打字游標的高度剛好貼齊文字 */
+}
+.footer-text::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    background-color: var(--light-pink); /* 使用背景色遮擋 */
+    border-left: 2px solid transparent; /* 把打字游標的線條變細 */
+}
+
+.footer-text.active::after {
+    animation: typing-uncover 1.5s steps(19, end) forwards, blink-cursor-main 0.75s step-end 2 forwards;
+}
+
+/* =========================================
+   動畫效果 (Animations)
+   ========================================= */
+   @keyframes fadeSlideDown {
+    from { opacity: 0; transform: translateY(-30px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes popIn {
+    0% { opacity: 0; transform: scale(0.8); }
+    70% { opacity: 1; transform: scale(1.05); }
+    100% { opacity: 1; transform: scale(1); }
+}
+
+.animate-title {
+    opacity: 0; /* 初始隱藏，等待滑動到時再顯示 */
+}
+.animate-title.active {
+    animation: fadeSlideDown 0.8s ease-out forwards; /* 加上 active 才會觸發動畫 */
+}
+
+/* =========================================
+   打字機動畫定義
+   ========================================= */
+   @keyframes typing-uncover {
+    from { width: 100%; }
+    to { width: 0%; } /* 遮罩縮小到 0，完全露出文字 */
+}
+
+@keyframes blink-cursor-main {
+    0%, 49% { border-left-color: var(--main-pink); }
+    50%, 100% { border-left-color: transparent; }
+}
+
+@keyframes blink-cursor-accent {
+    0%, 49% { border-left-color: var(--accent-pink); }
+    50%, 100% { border-left-color: transparent; }
+}
