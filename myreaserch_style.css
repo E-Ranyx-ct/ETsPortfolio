@@ -1,0 +1,232 @@
+:root {
+    --bg-pink: #FEECEF;
+    --main-pink: #E58B9D;
+    --dark-pink: #F6B5C0;
+    --white: #FFFFFF;
+    --text-gray: #555;
+    --text-light: #888;
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+
+body { 
+    font-family: 'Montserrat', 'Noto Sans TC', sans-serif;
+    color: var(--text-gray);
+    line-height: 1.8;
+    background-color: var(--white);
+    -webkit-font-smoothing: antialiased;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+.container { max-width: 1000px; margin: 0 auto; padding: 40px 20px 100px 20px; }
+
+/* 頁面標題 */
+.page-title {
+    text-align: center;
+    margin-bottom: 60px;
+    margin-top: 40px;
+}
+.page-title h1 {
+    font-size: 3rem;
+    color: var(--main-pink);
+    font-family: 'Montserrat', sans-serif;
+}
+.page-title .subtitle {
+    font-size: 1.1rem;
+    color: var(--text-light);
+    margin-bottom: 20px;
+}
+.divider {
+    width: 60px;
+    height: 3px;
+    background-color: var(--dark-pink);
+    margin: 0 auto;
+    border-radius: 2px;
+}
+
+/* 區塊通用樣式 */
+section { margin-bottom: 80px; }
+
+.section-title {
+    margin-bottom: 30px;
+    border-left: 5px solid var(--main-pink);
+    padding-left: 15px;
+    width: 100%;
+    text-align: left;
+}
+.section-title h2 {
+    font-size: 1.8rem;
+    color: var(--text-gray);
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 15px;
+}
+.section-title span {
+    font-size: 1rem;
+    font-weight: normal;
+    color: var(--text-light);
+}
+
+/* 研究方向 */
+.research-intro {
+    background: var(--bg-pink);
+    padding: 40px;
+    border-radius: 20px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.02);
+}
+.intro-zh { font-size: 1.05rem; margin-bottom: 15px; text-align: justify; }
+.intro-en { font-size: 0.9rem; color: #777; font-style: italic; }
+
+/* 研究標籤 */
+.research-tags {
+    margin-top: 20px;
+    font-weight: 700;
+    color: var(--main-pink);
+    font-size: 1.05rem;
+}
+
+/* 論文列表 */
+/* 新增：分類區塊與小標題樣式 */
+.category-section {
+    margin-bottom: 50px;
+    width: 100%;
+}
+.sub-category-title {
+    font-size: 1.3rem;
+    color: var(--main-pink);
+    margin-bottom: 20px;
+    font-family: 'Montserrat', 'Noto Sans TC', sans-serif;
+    font-weight: 700;
+    border-bottom: 2px dashed var(--bg-pink);
+    padding-bottom: 10px;
+}
+
+.card-list { display: flex; flex-direction: column; gap: 30px; width: 100%; }
+.research-card {
+    background: #fff;
+    border: 1.5px solid var(--bg-pink);
+    border-radius: 15px;
+    padding: 40px;
+    width: 100%;
+    transition: transform 0.3s, box-shadow 0.3s;
+    position: relative;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.02);
+}
+.research-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(229, 139, 157, 0.15);
+    border-color: var(--main-pink);
+}
+.card-content h3 { color: #000000; margin-bottom: 8px; font-size: 1.3rem; }
+.publish-info { font-size: 0.85rem; color: var(--text-light); margin-bottom: 15px; font-weight: bold; }
+.abstract { font-size: 0.95rem; margin-bottom: 15px; }
+.read-more { 
+    color: var(--main-pink); 
+    font-weight: 600; 
+    text-decoration: none; 
+    font-size: 0.9rem;
+}
+.read-more:hover { text-decoration: underline; }
+
+/* 研討會網格 */
+.conference-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+}
+.conf-item {
+    background: #fff;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+}
+.conf-img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+.conf-info { padding: 20px; }
+.conf-info h4 { font-size: 1.1rem; color: var(--text-gray); margin-bottom: 5px; }
+.conf-info span { font-size: 0.85rem; color: var(--main-pink); }
+
+/* 動畫效果 */
+.animate-item {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+.animate-item.active {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* 回到頂部按鈕 */
+.back-to-top {
+    position: fixed;
+    bottom: 40px;
+    right: 40px;
+    background-color: var(--main-pink);
+    color: white;
+    border: none;
+    border-radius: 50%;
+    width: 55px;
+    height: 55px;
+    font-size: 1.5rem;
+    cursor: pointer;
+    box-shadow: 0 5px 15px rgba(229, 139, 157, 0.4);
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s ease;
+    z-index: 999;
+}
+.back-to-top.show { opacity: 1; visibility: visible; }
+.back-to-top:hover { background-color: #d17586; transform: translateY(-5px); }
+
+/* =========================================
+   左側漂浮目錄 (Floating TOC)
+   ========================================= */
+.floating-toc {
+    position: fixed;
+    left: 40px;
+    top: 50%;
+    transform: translateY(-50%) translateX(-20px);
+    background: rgba(255, 255, 255, 0.95);
+    padding: 25px 30px;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(229, 139, 157, 0.15);
+    border: 1.5px solid var(--bg-pink);
+    z-index: 998;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.4s ease-out; /* 顯示隱藏的平滑過渡動畫 */
+}
+
+.floating-toc.show {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(-50%) translateX(0); /* 顯示時由左向右滑入 */
+}
+
+.floating-toc ul {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.floating-toc a {
+    color: var(--text-gray);
+    text-decoration: none;
+    font-size: 0.95rem;
+    font-weight: 600;
+    position: relative;
+    transition: color 0.3s;
+}
+
+.floating-toc a:hover {
+    color: var(--main-pink);
+}
