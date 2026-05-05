@@ -12,7 +12,7 @@ html { scroll-behavior: smooth; }
 
 
 body { 
-    font-family: 'Montserrat', 'Noto Sans TC', sans-serif;
+    font-family: 'Noto Sans TC', sans-serif;
     color: var(--text-gray);
     line-height: 1.8;
     background-color: var(--white);
@@ -136,7 +136,7 @@ body {
     height: auto;
     
     /* 5. 初始位移（隱藏一半） */
-    transform: translateX(20%) rotate(-5deg);
+    transform: translateX(10%) rotate(-5deg);
     
     /* 6. 動畫觸發 */
     animation: peekAnimation 3s infinite ease-in-out;
@@ -147,10 +147,10 @@ body {
 
 @keyframes peekAnimation {
     0%, 100% {
-        transform: translateX(20%) rotate(-5deg);
+        transform: translateX(10%) rotate(-5deg);
     }
     50% {
-        transform: translateX(10%) rotate(-3deg);
+        transform: translateX(5%) rotate(-3deg);
     }
 }
 .graphic-content-wrapper {
@@ -408,5 +408,26 @@ body {
     }
     .nav-item span {
         font-size: 0.85rem;
+    }
+}
+
+/* =========================================
+   修正：強制鎖定滿版區塊在手機上維持電腦版尺寸
+   解決 100vw 導致寬度縮水、內部內容被擠壓的問題
+   ========================================= */
+@media (max-width: 1024px) {
+    .page-header, 
+    #graphic, 
+    #web, 
+    #software, 
+    #ai-application {
+        width: 1024px;
+        margin-left: -512px;
+        margin-right: -512px;
+    }
+    
+    /* 強制內容容器不縮水，鎖死在電腦版的寬度，解決文字被擠壓變長的問題 */
+    .container {
+        min-width: 1000px;
     }
 }
