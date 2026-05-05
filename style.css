@@ -274,3 +274,40 @@ footer {
     font-size: 0.8rem;
     font-weight: 300;
 }
+
+/* =========================================
+   右下角漂浮社群連結 (Social Floating Links)
+   ========================================= */
+.social-floating {
+    position: fixed;
+    right: 45px;
+    bottom: 110px; /* 高度預留空間，避免擋到回到頂部按鈕 */
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    z-index: 998;
+}
+
+.social-floating a {
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    background-color: #E58B9D; /* 品牌粉色 */
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    box-shadow: 0 5px 15px rgba(229, 139, 157, 0.4);
+    transition: all 0.3s ease;
+}
+
+.social-floating a:hover {
+    transform: scale(1.1) translateY(-3px); /* 移入時放大並稍微上浮 */
+    background-color: #d17586;
+}
+
+.social-floating svg {
+    width: 20px;
+    height: 20px;
+}

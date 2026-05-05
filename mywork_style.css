@@ -22,7 +22,7 @@ body {
     min-height: 100vh;
     margin: 0;
     padding: 0;
-    overflow-x: hidden; /* 確保不會出現橫向滾動條 */
+    /* 移除 overflow-x: hidden; 這樣手機上才能自由左右滑動縮放 */
 }
 
 .container { max-width: 1000px; margin: 0 auto; padding: 0 20px; }
@@ -400,6 +400,38 @@ body {
    修正：強制鎖定滿版區塊在手機上維持電腦版尺寸
    解決 100vw 導致高度縮水、內部內容超過顯示範圍的問題
    ========================================= */
+@media (max-width: 1024px) {
+    /* 1. 在手機版隱藏探頭小動畫 */
+    .peek-character {
+        display: none;
+    }
+
+    /* 2. 強制鎖定滿版區塊，避免手機寬度縮水 */
+    .page-header, 
+    #graphic, 
+    #web, 
+    #software, 
+    #ai-application {
+        width: 1024px;
+        margin-left: -512px;
+        margin-right: -512px;
+    }
+
+    /* 3. 解決平面設計區塊改為固定寬度後產生的底部空白問題 */
+    #graphic {
+        padding-top: 0;
+        padding-bottom: 80px; 
+    }
+    .graphic-content-wrapper {
+        position: relative;
+        height: auto;
+    }
+    
+    /* 4. 強制內容容器不縮水，解決左側文字被擠壓變長的問題 */
+    .container {
+        min-width: 1000px;
+    }
+}
 
 
 /* =========================================
