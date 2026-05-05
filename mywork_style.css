@@ -367,6 +367,43 @@ body {
 }
 
 /* =========================================
+   可點擊圖片的提示標籤 (Click Hint Link)
+   ========================================= */
+.click-hint-link {
+    position: relative;
+    display: block;
+    width: 100%;
+    height: fit-content;
+}
+.intro-flex .click-hint-link { flex: 1; } /* 針對平面設計並排區塊的尺寸修正 */
+.software-card .click-hint-link { margin-bottom: 20px; } /* 修正軟體卡片圖片下的間距 */
+.software-card .click-hint-link img.main-preview { margin-bottom: 0; }
+
+.click-hint-link::after {
+    content: 'Click to View';
+    position: absolute;
+    bottom: 15px;
+    right: 15px;
+    background: rgba(237, 176, 188, 0.95); /* 品牌粉色帶微透明 */
+    color: #fff;
+    padding: 6px 14px;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    font-family: 'Montserrat', 'Noto Sans TC', sans-serif;
+    font-weight: 600;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+    pointer-events: none; /* 確保不會擋住使用者的點擊 */
+    opacity: 0.85;
+    transition: all 0.3s ease;
+    z-index: 10;
+}
+.click-hint-link:hover::after {
+    opacity: 1;
+    background: #d17586;
+    transform: scale(1.05) translateY(-2px); /* 滑鼠移過去時微放大上浮 */
+}
+
+/* =========================================
    回到頂部按鈕 (Back to Top)
    ========================================= */
    .back-to-top {
