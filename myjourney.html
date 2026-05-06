@@ -25,9 +25,21 @@
         <img src="img/my-journey-title.png" alt="My Journey">
     </header>
 
+    <!-- 左側漂浮目錄 -->
+    <nav id="floating-toc" class="floating-toc">
+        <ul>
+            <li><a href="#year-2021">2021</a></li>
+            <li><a href="#year-2022">2022</a></li>
+            <li><a href="#year-2023">2023</a></li>
+            <li><a href="#year-2024">2024</a></li>
+            <li><a href="#year-2025">2025</a></li>
+            <li><a href="#year-2026">2026</a></li>
+        </ul>
+    </nav>
+
     <div class="timeline-container">
 
-        <div class="timeline-item right animate-title">
+        <div class="timeline-item right animate-title" id="year-2021">
             <span class="year-label">2021</span>
             <div class="content">
                 <span class="date-text">2021. 9</span>
@@ -36,7 +48,7 @@
             </div>
         </div>
 
-        <div class="timeline-item left animate-title">
+        <div class="timeline-item left animate-title" id="year-2022">
             <span class="year-label">2022</span>
             <div class="content">
                 <span class="date-text">2022. 4</span>
@@ -54,7 +66,7 @@
             </div>
         </div>
 
-        <div class="timeline-item left animate-title">
+        <div class="timeline-item left animate-title" id="year-2023">
             <span class="year-label">2023</span>
             <div class="content">
                 <span class="date-text">2023. 6</span>
@@ -78,7 +90,7 @@
                 <img src="img/IA.jpeg" alt="Industry-Academia Collaboration" class="event-img">
             </div>
         </div>
-        <div class="timeline-item right animate-title">
+        <div class="timeline-item right animate-title" id="year-2024">
             <span class="year-label">2024</span>
             <div class="content">
                 <span class="date-text">2024. 6</span>
@@ -110,7 +122,7 @@
                 <p class="title-en">Completion of the 2024 College Student Research Project Report “Enhancing Learning Engagement, Motivation, and Outcomes Through the Integration of AI-Based Sentiment Analysis and Empathetic Communication”</p>
             </div>
         </div>
-        <div class="timeline-item right animate-title">
+        <div class="timeline-item right animate-title" id="year-2025">
             <span class="year-label">2025</span>
             <div class="content">
                 <span class="date-text">2025 . 5</span>
@@ -159,7 +171,7 @@
                 <img src="img/Startup Expo.jpeg" alt="Startup Expo" class="event-img">
             </div>
         </div>
-        <div class="timeline-item right animate-title">
+        <div class="timeline-item right animate-title" id="year-2026">
             <span class="year-label">2026</span>
             <div class="content">
                 <span class="date-text">2026 . 3</span>
@@ -176,7 +188,13 @@
                 <img src="img/usa-2026.jpeg" alt="USA Trip" class="event-img">
             </div>
         </div>
-
+        <div class="timeline-item right animate-title">
+            <div class="content">
+                <span class="date-text">2026. 4</span>
+                <p class="title-zh">開始擔任CATISS(掌門人商學院)執行長特助</p>
+                <p class="title-en">Executive Assistant to the CEO, CATISS (Chief School of Business)</p>
+            </div>
+        </div>
     </div>
 
     <div class="footer-text">To be continued...</div>
@@ -214,11 +232,38 @@
 
         // 回到頂部按鈕功能
         const backToTopBtn = document.getElementById('backToTop');
+        const floatingToc = document.getElementById('floating-toc');
+        let tocTimeout; // 用來記錄滑動停止的計時器
+        let isHoveringToc = false; // 判斷滑鼠是否停留在目錄上
+
+        // 滑鼠移入目錄時，保持顯示不隱藏
+        floatingToc.addEventListener('mouseenter', () => {
+            isHoveringToc = true;
+            clearTimeout(tocTimeout);
+        });
+
+        // 滑鼠移出目錄時，重新開始倒數隱藏
+        floatingToc.addEventListener('mouseleave', () => {
+            isHoveringToc = false;
+            tocTimeout = setTimeout(() => {
+                floatingToc.classList.remove('show');
+            }, 1500); // 1.5 秒後自動隱藏
+        });
+
         window.addEventListener('scroll', () => {
             if (window.scrollY > 300) { // 當往下捲動超過 300px 時顯示按鈕
                 backToTopBtn.classList.add('show');
+                floatingToc.classList.add('show'); // 滑動時顯示目錄
+                
+                clearTimeout(tocTimeout); // 只要還在滑動，就清除隱藏計時
+                if (!isHoveringToc) {
+                    tocTimeout = setTimeout(() => {
+                        floatingToc.classList.remove('show'); // 停止滑動 1.5 秒後隱藏目錄
+                    }, 1500);
+                }
             } else {
                 backToTopBtn.classList.remove('show');
+                floatingToc.classList.remove('show');
             }
         });
         backToTopBtn.addEventListener('click', () => {
