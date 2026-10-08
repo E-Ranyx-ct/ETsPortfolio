@@ -218,27 +218,37 @@ body {
 }
 
 /* =========================================
-   左側漂浮目錄 (Floating TOC)
+   左側漂浮目錄 (Floating TOC - 超輕量半透明不遮擋設計)
    ========================================= */
 .floating-toc {
     position: fixed;
-    left: 40px;
+    left: max(10px, calc((100vw - 1040px) / 2 - 110px));
     top: 50%;
-    transform: translateY(-50%) translateX(-20px);
-    background: rgba(255, 255, 255, 0.95);
-    padding: 25px 30px;
-    border-radius: 15px;
-    box-shadow: 0 10px 30px rgba(229, 139, 157, 0.15);
-    border: 1.5px solid #FEECEF; /* 品牌淺粉色 */
+    transform: translateY(-50%) translateX(-15px);
+    background: rgba(255, 255, 255, 0.48); /* 高透光度毛玻璃，絕不遮擋底層資訊 */
+    backdrop-filter: blur(14px);
+    -webkit-backdrop-filter: blur(14px);
+    padding: 12px 14px;
+    border-radius: 14px;
+    box-shadow: 0 4px 18px rgba(229, 139, 157, 0.12), 0 1px 3px rgba(0, 0, 0, 0.02);
+    border: 1.5px solid rgba(254, 236, 239, 0.85);
     z-index: 998;
     opacity: 0;
     visibility: hidden;
-    transition: all 0.4s ease-out; /* 顯示隱藏的平滑過渡動畫 */
+    pointer-events: none;
+    transition: opacity 0.3s ease, transform 0.3s cubic-bezier(0.2, 0.8, 0.2, 1), visibility 0.3s ease, background 0.3s ease;
+    max-width: 95px;
+}
+
+.floating-toc:hover {
+    background: rgba(255, 255, 255, 0.88);
+    box-shadow: 0 8px 24px rgba(229, 139, 157, 0.18);
 }
 
 .floating-toc.show {
     opacity: 1;
     visibility: visible;
+    pointer-events: auto;
     transform: translateY(-50%) translateX(0); /* 顯示時由左向右滑入 */
 }
 
@@ -246,7 +256,7 @@ body {
     list-style: none;
     display: flex;
     flex-direction: column;
-    gap: 20px;
+    gap: 8px;
     margin: 0;
     padding: 0;
 }
@@ -254,12 +264,49 @@ body {
 .floating-toc a {
     color: #555;
     text-decoration: none;
-    font-size: 0.95rem;
-    font-weight: 600;
+    font-size: 0.82rem;
+    font-weight: 700;
     position: relative;
-    transition: color 0.3s;
+    padding-left: 9px;
+    transition: all 0.25s ease;
+    display: inline-block;
+    line-height: 1.2;
 }
 
-.floating-toc a:hover {
+.floating-toc a::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%) scale(0);
+    width: 4px;
+    height: 4px;
+    border-radius: 50%;
+    background-color: #E58B9D;
+    transition: transform 0.25s ease;
+}
+
+.floating-toc a:hover,
+.floating-toc a.active {
     color: #E58B9D; /* 品牌主粉色 */
+}
+
+.floating-toc a:hover::before,
+.floating-toc a.active::before {
+    transform: translateY(-50%) scale(1.3);
+}
+
+@media (max-width: 1240px) {
+    .floating-toc {
+        left: 8px;
+        padding: 10px 12px;
+        background: rgba(255, 255, 255, 0.42);
+        backdrop-filter: blur(16px);
+    }
+}
+
+@media (max-width: 1060px) {
+    .floating-toc {
+        display: none !important;
+    }
 }

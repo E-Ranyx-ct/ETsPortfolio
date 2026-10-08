@@ -1,14 +1,18 @@
 <!DOCTYPE html>
 <html lang="zh-Hant">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=1024">
     <title>My Work | ET's Portfolio</title>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;700&family=Noto+Sans+TC:wght@300;400;700&family=Varela+Round&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;700&family=Noto+Sans+TC:wght@300;400;700&family=Varela+Round&display=swap"
+        rel="stylesheet">
     <link rel="stylesheet" href="mywork_style.css">
     <link rel="stylesheet" href="style.css">
-    
+
 </head>
+
 <body>
     <header class="simple-header">
         <nav class="simple-nav">
@@ -17,60 +21,328 @@
             <a href="myjourney.html">My Journey</a>
             <a href="mywork.html">My Work</a>
             <a href="myresearch.html">My Research</a>
-            
+
         </nav>
     </header>
 
+    <!-- 左側漂浮目錄 -->
+    <nav id="floating-toc" class="floating-toc">
+        <ul>
+            <li>
+                <a href="#experience">
+                    <span class="toc-zh">相關經歷</span>
+                    <span class="toc-en">Experience</span>
+                </a>
+            </li>
+            <li>
+                <a href="#graphic">
+                    <span class="toc-zh">平面設計</span>
+                    <span class="toc-en">Graphic</span>
+                </a>
+            </li>
+            <li>
+                <a href="#web">
+                    <span class="toc-zh">網頁設計</span>
+                    <span class="toc-en">Web Design</span>
+                </a>
+            </li>
+            <li>
+                <a href="#software">
+                    <span class="toc-zh">軟體與AI</span>
+                    <span class="toc-en">Software & AI</span>
+                </a>
+            </li>
+        </ul>
+    </nav>
+
     <div class="container">
-        <header class="page-header">
+        <header class="page-header" id="experience">
             <div class="browser-window">
                 <div class="browser-bar">
-                    <div class="dots"><div class="dot"></div><div class="dot"></div><div class="dot"></div></div>
+                    <div class="dots">
+                        <div class="dot"></div>
+                        <div class="dot"></div>
+                        <div class="dot"></div>
+                    </div>
                     <img src="img/my-work-title.png" alt="My Work" class="browser-title">
                 </div>
-                <nav class="nav-grid">
-                    <a href="#graphic" class="nav-item">平面設計<span>Design</span></a>
-                    <a href="#web" class="nav-item">網頁設計<span>Website</span></a>
-                    <a href="#software" class="nav-item">軟體開發<span>Software</span></a>
-                    <a href="#ai-application" class="nav-item">AI 應用<span>AI Application</span></a>
-                </nav>
+                <div class="experience-board">
+                    <!-- Professional Experience Section -->
+                    <div class="exp-section">
+                        <div class="exp-section-header">
+                            <h2 class="exp-section-title">專業經歷 Professional Experience</h2>
+                            <span class="exp-scroll-hint">Slide ➔</span>
+                        </div>
+
+                        <div class="exp-scroll-track">
+                            <div class="exp-card">
+                                <div class="exp-card-header">
+                                    <h3 class="exp-role">Founder & Chief Executive Officer</h3>
+                                    <span class="exp-date">Aug. 2025 - Present</span>
+                                </div>
+                                <div class="exp-org-row">
+                                    <div class="exp-org">E-Ranyx Co., Ltd.</div>
+                                    <span class="exp-expand-btn">
+                                        <span class="expand-text">Details</span>
+                                        <svg class="chevron-icon" viewBox="0 0 24 24" width="12" height="12" fill="none"
+                                            stroke="currentColor" stroke-width="2.5" stroke-linecap="round"
+                                            stroke-linejoin="round">
+                                            <polyline points="6 9 12 15 18 9"></polyline>
+                                        </svg>
+                                    </span>
+                                </div>
+                                <div class="exp-desc">
+                                    <p class="exp-zh">主導數位轉型與網頁開發專案管理、商務洽談與公司營運，將技術架構轉化為實質商業價值，並帶領團隊參展 2026 亞灣新創大展。</p>
+                                    <p class="exp-en">Lead full-cycle digital transformation projects, client
+                                        negotiations, and corporate operations, translating complex tech architecture
+                                        into business value and directing startup showcases.</p>
+                                </div>
+                            </div>
+
+                            <div class="exp-card">
+                                <div class="exp-card-header">
+                                    <h3 class="exp-role">AR Animation Designer Intern</h3>
+                                    <span class="exp-date">July 2024 - Aug. 2024</span>
+                                </div>
+                                <div class="exp-org-row">
+                                    <div class="exp-org">DENKWII Design Co., Ltd.</div>
+                                    <span class="exp-expand-btn">
+                                        <span class="expand-text">Details</span>
+                                        <svg class="chevron-icon" viewBox="0 0 24 24" width="12" height="12" fill="none"
+                                            stroke="currentColor" stroke-width="2.5" stroke-linecap="round"
+                                            stroke-linejoin="round">
+                                            <polyline points="6 9 12 15 18 9"></polyline>
+                                        </svg>
+                                    </span>
+                                </div>
+                                <div class="exp-desc">
+                                    <p class="exp-zh">於 320 小時密集實習中，負責擴增實境（AR）動態設計與沉浸式互動視覺體驗開發。</p>
+                                    <p class="exp-en">Designed and implemented augmented reality (AR) animations and
+                                        interactive visual experiences over a 320-hour intensive internship.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Research Experience Section -->
+                    <div class="exp-section">
+                        <div class="exp-section-header">
+                            <h2 class="exp-section-title">研究經歷 Research Experience</h2>
+                            <span class="exp-scroll-hint">Slide ➔</span>
+                        </div>
+
+                        <div class="exp-scroll-track">
+                            <div class="exp-card">
+                                <div class="exp-card-header">
+                                    <h3 class="exp-role">Research Assistant</h3>
+                                    <span class="exp-date">Mar. 2026 - Present</span>
+                                </div>
+                                <div class="exp-org-row">
+                                    <div class="exp-org">Graduate Institute of Mathematics and Science Education at
+                                        National Tsing Hua University</div>
+                                    <span class="exp-expand-btn">
+                                        <span class="expand-text">Details</span>
+                                        <svg class="chevron-icon" viewBox="0 0 24 24" width="12" height="12" fill="none"
+                                            stroke="currentColor" stroke-width="2.5" stroke-linecap="round"
+                                            stroke-linejoin="round">
+                                            <polyline points="6 9 12 15 18 9"></polyline>
+                                        </svg>
+                                    </span>
+                                </div>
+                                <div class="exp-desc">
+                                    <p class="exp-zh">負責學術問卷統計分析、學術論文撰寫協助與研討會簡報製作。</p>
+                                    <p class="exp-en">Conduct questionnaire statistical analysis, assist in academic
+                                        manuscript writing, and produce conference presentations.</p>
+                                </div>
+                            </div>
+
+                            <div class="exp-card">
+                                <div class="exp-card-header">
+                                    <h3 class="exp-role">Research & Administrative Assistant</h3>
+                                    <span class="exp-date">July 2023 - July 2025</span>
+                                </div>
+                                <div class="exp-org-row">
+                                    <div class="exp-org">Department of Digital Content Technology at National Taichung
+                                        University of Education</div>
+                                    <span class="exp-expand-btn">
+                                        <span class="expand-text">Details</span>
+                                        <svg class="chevron-icon" viewBox="0 0 24 24" width="12" height="12" fill="none"
+                                            stroke="currentColor" stroke-width="2.5" stroke-linecap="round"
+                                            stroke-linejoin="round">
+                                            <polyline points="6 9 12 15 18 9"></polyline>
+                                        </svg>
+                                    </span>
+                                </div>
+                                <div class="exp-desc">
+                                    <p class="exp-zh">運用 SPSS、SmartPLS 與 RStudio 進行高階數據分析與論文撰寫，並透過 Scopus 進行 STEM
+                                        書目計量分析與實驗室行政人事管理。</p>
+                                    <p class="exp-en">Performed advanced data analysis with SPSS, SmartPLS, and RStudio,
+                                        analyzed STEM bibliometric trends via Scopus, and managed lab administration.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
         </header>
 
         <section id="graphic">
-            <img src="img/peek-character.png" class="peek-character" alt="角色探頭">
+
             <div class="graphic-content-wrapper">
-                
+
                 <div class="container">
-                   
+
                     <div class="sec-title-wrap">
                         <img src="img/graphic-title.png" alt="平面設計 Design" class="sec-title-img">
                         <div class="sw-icons">
                             <img src="img/logo-ai.png" alt="Ai">
                             <img src="img/logo-ps.png" alt="Ps">
+                            <img src="img/Procreate_icon.png" alt="procreate">
                             <img src="img/logo-sketchbook.png" alt="sketchbook">
                         </div>
                     </div>
-        
-                    <div class="intro-flex">
-                        <div class="intro-text">
-                            <p class="intro-zh">我擅長以療癒系插畫風格進行角色開發與主視覺設計，賦予品牌獨特的親和力與生命力。多項專案實務經驗讓我能捕捉客戶的品牌調性，提供從品牌視覺識別到實體展場物料的完整設計方案。此外，我亦經營個人插畫品牌，以暖心小動物為核心角色，透過視覺在社群傳遞療癒力量。</p>
-                            <p class="intro-en">Specializing in healing-style illustration, I excel at character development and key visual design, infusing brands with a unique sense of warmth and vitality. With extensive project experience, I am skilled at capturing a brand’s core essence offering comprehensive design solutions ranging from Visual Identity (VI) to physical exhibition materials. Furthermore, I manage my own illustration brand featuring heartwarming animals, using visual storytelling to share healing energy across social media.</p>
+
+                    <!-- 垂直專案輪播組件 (Vertical Project Carousel) -->
+                    <div class="graphic-carousel-container">
+                        <!-- 上方導覽列：專案分頁標籤 + 上下切換箭頭 -->
+                        <div class="carousel-nav-bar">
+                            <div class="carousel-tabs">
+                                <button type="button" class="carousel-tab-btn graphic-tab-btn active" data-slide="0">
+                                    <span class="tab-num">01</span>
+                                    <span class="tab-name">噗啾 & 呼嚕</span>
+                                </button>
+                                <button type="button" class="carousel-tab-btn graphic-tab-btn" data-slide="1">
+                                    <span class="tab-num">02</span>
+                                    <span class="tab-name">品牌延伸設計</span>
+                                </button>
+                                <button type="button" class="carousel-tab-btn graphic-tab-btn" data-slide="2">
+                                    <span class="tab-num">03</span>
+                                    <span class="tab-name">參展物料設計</span>
+                                </button>
+                            </div>
+                            <div class="carousel-arrow-controls">
+                                <button type="button" class="carousel-arrow-btn prev-btn" id="graphicPrevBtn"
+                                    title="上一個專案 (Previous)">
+                                    <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor"
+                                        stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                                        <polyline points="18 15 12 9 6 15"></polyline>
+                                    </svg>
+                                </button>
+                                <button type="button" class="carousel-arrow-btn next-btn" id="graphicNextBtn"
+                                    title="下一個專案 (Next)">
+                                    <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor"
+                                        stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                                        <polyline points="6 9 12 15 18 9"></polyline>
+                                    </svg>
+                                </button>
+                            </div>
                         </div>
-                        <a href="https://www.instagram.com/p/DM98WZdSDsR/?utm_source=ig_web_copy_link" target="_blank" class="click-hint-link"><img src="img/graphic-main.png" alt="Character" class="intro-side-img"></a>
+
+                        <!-- 垂直視窗軌道 (Vertical Viewport & Slides Track) -->
+                        <div class="carousel-viewport" id="graphicViewport">
+                            <div class="carousel-track" id="graphicTrack">
+                                <!-- 幻燈片 1: 噗啾 & 呼嚕 -->
+                                <div class="carousel-slide">
+                                    <div class="project-showcase-card">
+                                        <div class="project-header">
+                                            <div class="project-title-group">
+                                                <h3 class="project-title">噗啾 & 呼嚕</h3>
+                                                <span class="project-subtitle">Poochoo & Hooloo · 原創插畫品牌 Original Illustration Brand</span>
+                                            </div>
+                                            <div class="project-links">
+                                                <a href="https://www.instagram.com/poochoo_hooloo/" target="_blank"
+                                                    rel="noopener noreferrer" class="proj-btn ig-btn">
+                                                    <svg viewBox="0 0 24 24" width="16" height="16" fill="none"
+                                                        stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                                        stroke-linejoin="round">
+                                                        <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
+                                                        <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z">
+                                                        </path>
+                                                        <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
+                                                    </svg>
+                                                    <span>Instagram</span>
+                                                </a>
+                                                <a href="https://eranyx.com/products/poochoo-hooloo/about/"
+                                                    target="_blank" rel="noopener noreferrer" class="proj-btn web-btn">
+                                                    <span>Website</span>
+                                                </a>
+                                            </div>
+                                        </div>
+                                        <div class="project-media-wrapper">
+                                            <a href="https://eranyx.com/products/poochoo-hooloo/about/" target="_blank">
+                                                <img src="img/噗啾&呼嚕.png" alt="噗啾 & 呼嚕 Poochoo & Hooloo"
+                                                    class="project-cover-img">
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- 幻燈片 2: 品牌延伸設計 (w1, w2, w3) -->
+                                <div class="carousel-slide">
+                                    <div class="project-showcase-card">
+                                        <div class="project-header">
+                                            <div class="project-title-group">
+                                                <h3 class="project-title">品牌延伸設計</h3>
+                                                <span class="project-subtitle">Brand Extension Design</span>
+                                            </div>
+                                        </div>
+                                        <div class="project-gallery-grid grid-3">
+                                            <img src="img/w1.jpg" alt="品牌延伸設計 1" class="gallery-img">
+                                            <img src="img/w2.jpg" alt="品牌延伸設計 2" class="gallery-img">
+                                            <img src="img/w3.jpg" alt="品牌延伸設計 3" class="gallery-img">
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- 幻燈片 3: 參展物料設計 (w4, w5, w6) -->
+                                <div class="carousel-slide">
+                                    <div class="project-showcase-card">
+                                        <div class="project-header">
+                                            <div class="project-title-group">
+                                                <h3 class="project-title">參展物料設計</h3>
+                                                <span class="project-subtitle">Exhibition Materials Design</span>
+                                            </div>
+                                            <div class="project-links">
+                                                <a href="https://www.instagram.com/p/DRBgwWsD32H/?stkn=MzlrNnVmZHphYjRy"
+                                                    target="_blank" rel="noopener noreferrer" class="proj-btn ig-btn">
+                                                    <svg viewBox="0 0 24 24" width="16" height="16" fill="none"
+                                                        stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                                        stroke-linejoin="round">
+                                                        <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
+                                                        <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z">
+                                                        </path>
+                                                        <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
+                                                    </svg>
+                                                    <span>Instagram</span>
+                                                </a>
+                                            </div>
+                                        </div>
+                                        <div class="project-gallery-grid grid-3">
+                                            <a href="https://www.instagram.com/p/DRBgwWsD32H/?stkn=MzlrNnVmZHphYjRy"
+                                                target="_blank">
+                                                <img src="img/w4.png" alt="參展物料設計 1" class="gallery-img">
+                                            </a>
+                                            <a href="https://www.instagram.com/p/DRBgwWsD32H/?stkn=MzlrNnVmZHphYjRy"
+                                                target="_blank">
+                                                <img src="img/w5.png" alt="參展物料設計 2" class="gallery-img">
+                                            </a>
+                                            <a href="https://www.instagram.com/p/DRBgwWsD32H/?stkn=MzlrNnVmZHphYjRy"
+                                                target="_blank">
+                                                <img src="img/w6.png" alt="參展物料設計 3" class="gallery-img">
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
-        
-                    <div class="grid-row-3">
-                        <img src="img/w1.jpg" class="gallery-img"><img src="img/w2.jpg" class="gallery-img"><img src="img/w3.jpg" class="gallery-img">
-                    </div>
-                    <div class="grid-row-4">
-                        <a href="https://www.instagram.com/p/DRBgwWsD32H/?igsh=amd1aDBwcDZmaTdq" target="_blank" class="click-hint-link"><img src="img/w4.png" class="gallery-img"></a> <a href="https://www.instagram.com/p/DRBgwWsD32H/?igsh=amd1aDBwcDZmaTdq" target="_blank" class="click-hint-link"><img src="img/w5.png" class="gallery-img"></a> <img src="img/w8.png" class="gallery-img"><a href="https://www.instagram.com/p/DV-lu6Aj-jO/?igsh=bGx1NWoyaHk5aG80" target="_blank" class="click-hint-link"><img src="img/w7.png" class="gallery-img"></a>
-                    </div>
+
                 </div>
             </div>
-            
+
         </section>
-    
+
         <section id="web">
             <div class="container">
                 <div class="sec-title-wrap">
@@ -82,137 +354,645 @@
                         <img src="img/logo-js.png" alt="js">
                         <img src="img/logo-php.png" alt="php">
                         <img src="img/logo-python.png" alt="python">
-
                     </div>
                 </div>
-                <div class="web-flow-container">
-                    <img src="img/web-flow-full.png" alt="網頁設計流程" class="web-flow-img">
+
+                <!-- 垂直專案輪播組件 (Web Vertical Carousel) -->
+                <div class="web-carousel-container">
+                    <!-- 上方導覽列：專案分頁標籤 + 上下切換箭頭 -->
+                    <div class="carousel-nav-bar">
+                        <div class="carousel-tabs">
+                            <button type="button" class="carousel-tab-btn web-tab-btn active" data-slide="0">
+                                <span class="tab-num">01</span>
+                                <span class="tab-name">設計與開發流程</span>
+                            </button>
+                            <button type="button" class="carousel-tab-btn web-tab-btn" data-slide="1">
+                                <span class="tab-num">02</span>
+                                <span class="tab-name">品牌官網</span>
+                            </button>
+                            <button type="button" class="carousel-tab-btn web-tab-btn" data-slide="2">
+                                <span class="tab-num">03</span>
+                                <span class="tab-name">產品介紹頁</span>
+                            </button>
+                        </div>
+                        <div class="carousel-arrow-controls">
+                            <button type="button" class="carousel-arrow-btn prev-btn" id="webPrevBtn"
+                                title="上一個專案 (Previous)">
+                                <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor"
+                                    stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                                    <polyline points="18 15 12 9 6 15"></polyline>
+                                </svg>
+                            </button>
+                            <button type="button" class="carousel-arrow-btn next-btn" id="webNextBtn"
+                                title="下一個專案 (Next)">
+                                <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor"
+                                    stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                                    <polyline points="6 9 12 15 18 9"></polyline>
+                                </svg>
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- 垂直視窗軌道 (Vertical Viewport & Slides Track) -->
+                    <div class="carousel-viewport" id="webViewport">
+                        <div class="carousel-track" id="webTrack">
+                            <!-- 幻燈片 1: 網頁設計與開發流程 -->
+                            <div class="carousel-slide web-slide">
+                                <div class="project-showcase-card">
+                                    <div class="project-header">
+                                        <div class="project-title-group">
+                                            <h3 class="project-title">網頁設計流程</h3>
+                                            <span class="project-subtitle">Web Design & Development Workflow</span>
+                                        </div>
+                                    </div>
+                                    <div class="web-flow-container">
+                                        <img src="img/web-flow-full.png" alt="網頁設計流程" class="web-flow-img">
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- 幻燈片 2: 品牌官網 -->
+                            <div class="carousel-slide web-slide">
+                                <div class="project-showcase-card">
+                                    <div class="project-header">
+                                        <div class="project-title-group">
+                                            <h3 class="project-title">品牌官網</h3>
+                                            <span class="project-subtitle">Heklis Tint · Brand Official Website</span>
+                                        </div>
+                                        <div class="project-links">
+                                            <a href="https://heklis-tint.com" target="_blank" rel="noopener noreferrer"
+                                                class="proj-btn web-btn">
+                                                <span>Website</span>
+                                            </a>
+                                        </div>
+                                    </div>
+                                    <div class="project-media-wrapper" style="max-width: 960px;">
+                                        <a href="https://heklis-tint.com" target="_blank"
+                                            style="display: block; width: 100%;">
+                                            <img src="img/web-showcase.jpeg" alt="品牌官網" class="web-showcase">
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- 幻燈片 3: 產品介紹頁 -->
+                            <div class="carousel-slide web-slide">
+                                <div class="project-showcase-card">
+                                    <div class="project-header">
+                                        <div class="project-title-group">
+                                            <h3 class="project-title">產品介紹頁</h3>
+                                            <span class="project-subtitle">Product Landing Page · LINE 官方帳號智慧助手 (LINE OA Assistant)</span>
+                                        </div>
+                                        <div class="project-links">
+                                            <a href="https://promo.eranyx.com/line-oa/" target="_blank"
+                                                rel="noopener noreferrer" class="proj-btn web-btn">
+                                                <span>Website</span>
+                                            </a>
+                                        </div>
+                                    </div>
+                                    <div class="project-media-wrapper" style="max-width: 960px;">
+                                        <a href="https://promo.eranyx.com/line-oa/" target="_blank"
+                                            style="display: block; width: 100%;">
+                                            <img src="img/line-oa-promo.jpg" alt="產品介紹頁 · LINE 官方帳號智慧助手"
+                                                class="web-showcase">
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-                <div class="intro-text" style="margin-bottom: 40px;">
-                    <p class="intro-zh">在網頁開發領域中，我時常擔任技術與溝通的橋樑，擅長將客戶的文字需求，精確轉譯為具備美感與易用性的視覺化介面。利用設計基礎審美與程式邏輯，能包辦從需求訪談、UI/UX 介面實作到前後端系統串接的完整流程，而在每一次的專案開發中，我不斷精進此跨域能力，致力於為客戶打造兼具視覺張力與穩定效能的數位產品。</p>
-                    <p class="intro-en">In web development projects, I serve as a vital bridge between technology and communication. I excel at translating abstract client requirements into intuitive, aesthetic, and user-friendly interfaces. By leveraging my design sensibilities and programming logic, I manage the entire end-to-end process—from initial client consulting and UI/UX implementation to seamless front-end and back-end integration. Through every project, I continuously refine my cross-disciplinary expertise, dedicated to creating digital products that balance visual impact with robust performance.</p>
-                </div>
-                <a href="https://heklis-tint.com" target="_blank" class="click-hint-link"><img src="img/web-showcase.jpeg" alt="Web Showcase" class="web-showcase"></a>
-                
-                
+
             </div>
         </section>
-    
+
         <section id="software">
             <div class="container">
                 <div class="sec-title-wrap">
-                    <img src="img/software-title.png" alt="software" class="sec-title-img">
+                    <img src="img/software-title.png" alt="軟體開發與AI應用 Software & AI"
+                        class="sec-title-img software-title-img">
                     <div class="sw-icons">
-                        <img src="img/ribbon.png" class="ribbon-decor" alt="裝飾蝴蝶結">
+                        <img src="img/logo-unity.png" alt="Unity">
+                        <img src="img/logo-csharp.png" alt="C#">
+                        <img src="img/logo-flutter.png" alt="Flutter">
+                        <img src="img/logo-node.png" alt="Node.js">
+                        <img src="img/logo-python.png" alt="Python">
                     </div>
                 </div>
-                
-        
-                <div class="software-grid">
-                    <div class="software-card">
-                        <a href="https://youtu.be/T8X3RoFHU9A?si=TgqKOxWG6oaqEsh-" target="_blank" class="click-hint-link"><img src="img/game-ss.png" class="main-preview" alt="家秘日記"></a>
-                        <h3>遊戲製作</h3>
-                        <p>Game Development</p>
-                        <div class="tech-badges">
-                            <img src="img/logo-unity.png" alt="Unity">
-                            <img src="img/logo-csharp.png" alt="C#">
+
+                <!-- 垂直專案輪播組件 (Software & AI Vertical Carousel) -->
+                <div class="software-carousel-container">
+                    <!-- 上方導覽列：專案分頁標籤 + 上下切換箭頭 -->
+                    <div class="carousel-nav-bar">
+                        <div class="carousel-tabs">
+                            <button type="button" class="carousel-tab-btn software-tab-btn active" data-slide="0">
+                                <span class="tab-num">01</span>
+                                <span class="tab-name">時鐘與日常 APP</span>
+                            </button>
+                            <button type="button" class="carousel-tab-btn software-tab-btn" data-slide="1">
+                                <span class="tab-num">02</span>
+                                <span class="tab-name">AI Avatar</span>
+                            </button>
+                            <button type="button" class="carousel-tab-btn software-tab-btn" data-slide="2">
+                                <span class="tab-num">03</span>
+                                <span class="tab-name">情緒分析應用</span>
+                            </button>
+                            <button type="button" class="carousel-tab-btn software-tab-btn" data-slide="3">
+                                <span class="tab-num">04</span>
+                                <span class="tab-name">遊戲製作</span>
+                            </button>
+                            <button type="button" class="carousel-tab-btn software-tab-btn" data-slide="4">
+                                <span class="tab-num">05</span>
+                                <span class="tab-name">成績分析與學習輔助</span>
+                            </button>
+                        </div>
+                        <div class="carousel-arrow-controls">
+                            <button type="button" class="carousel-arrow-btn prev-btn" id="softwarePrevBtn"
+                                title="上一個專案 (Previous)">
+                                <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor"
+                                    stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                                    <polyline points="18 15 12 9 6 15"></polyline>
+                                </svg>
+                            </button>
+                            <button type="button" class="carousel-arrow-btn next-btn" id="softwareNextBtn"
+                                title="下一個專案 (Next)">
+                                <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor"
+                                    stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                                    <polyline points="6 9 12 15 18 9"></polyline>
+                                </svg>
+                            </button>
                         </div>
                     </div>
-        
-                    <div class="software-card">
-                        <img src="img/app-ss.png" class="main-preview" alt="APP 製作">
-                        <h3>APP 製作</h3>
-                        <p>App Development</p>
-                        <div class="tech-badges">
-                            <img src="img/logo-flutter.png" alt="Flutter">
-                            <img src="img/logo-node.png" alt="Node.js">
+
+                    <!-- 垂直視窗軌道 (Vertical Viewport & Slides Track) -->
+                    <div class="carousel-viewport" id="softwareViewport">
+                        <div class="carousel-track" id="softwareTrack">
+                            <!-- 幻燈片 1: 時鐘與日常 APP -->
+                            <div class="carousel-slide software-slide">
+                                <div class="project-showcase-card">
+                                    <div class="project-header">
+                                        <div class="project-title-group">
+                                            <h3 class="project-title">時鐘與日常 APP</h3>
+                                            <span class="project-subtitle">World Clock & Daily Routine App</span>
+                                        </div>
+                                        <div class="project-links">
+                                            <span class="tech-tag">Flutter</span>
+                                            <span class="tech-tag">Desktop App</span>
+                                            <a href="https://github.com/ET-E-Ranyx/world-clock-routine" target="_blank"
+                                                rel="noopener noreferrer" class="proj-btn github-btn">
+                                                <svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor">
+                                                    <path
+                                                        d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0 0 24 12c0-6.63-5.37-12-12-12z" />
+                                                </svg>
+                                                <span>GitHub</span>
+                                            </a>
+                                        </div>
+                                    </div>
+                                    <div class="project-desc-layout">
+                                        <div class="project-gallery-grid grid-2">
+                                            <a href="https://github.com/ET-E-Ranyx/world-clock-routine" target="_blank">
+                                                <img src="img/app-ss1.png" alt="時鐘與日常 APP 介面 1" class="gallery-img"
+                                                    style="aspect-ratio: auto; object-fit: contain; max-height: 280px;">
+                                            </a>
+                                            <a href="https://github.com/ET-E-Ranyx/world-clock-routine" target="_blank">
+                                                <img src="img/app-ss2.png" alt="時鐘與日常 APP 介面 2" class="gallery-img"
+                                                    style="aspect-ratio: auto; object-fit: contain; max-height: 280px;">
+                                            </a>
+                                        </div>
+                                        <div class="project-info-desc">
+                                            <p class="desc-zh">
+                                                具實用性的跨時區時鐘與日常工作管理桌面應用程式。採用現代卡片式介面設計，支援美國西岸與台灣雙時區對照、跨時區鬧鐘、每日例行習慣追蹤與隨手待辦事項管理。
+                                            </p>
+                                            <p class="desc-en">A practical cross-timezone desktop application for world
+                                                clock and daily routine management. Built with a modern card-based
+                                                interface, supporting US West Coast and Taiwan dual timezone comparison,
+                                                cross-timezone alarms, daily habit tracking, and quick task management.
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- 幻燈片 2: AI Avatar -->
+                            <div class="carousel-slide software-slide">
+                                <div class="project-showcase-card">
+                                    <div class="project-header">
+                                        <div class="project-title-group">
+                                            <h3 class="project-title">AI Avatar 虛擬形象</h3>
+                                            <span class="project-subtitle">Customizable AI Virtual Avatar</span>
+                                        </div>
+                                        <div class="project-links">
+                                            <span class="tech-tag">AI Avatar</span>
+                                            <span class="tech-tag">Voice & Text</span>
+                                            <span class="tech-tag">Multimodal</span>
+                                        </div>
+                                    </div>
+                                    <div class="project-desc-layout">
+                                        <div class="software-media-wrapper">
+                                            <img src="img/AI_Avatar.png" alt="AI Avatar 虛擬形象" class="software-preview-img">
+                                        </div>
+                                        <div class="project-info-desc">
+                                            <p class="desc-zh">
+                                                可客製外觀、語氣與品牌個性的 AI 虛擬形象。支援文字／語音互動、即時表情與多語對話，適用於官網接待、活動導覽、產品解說與沉浸式品牌體驗。
+                                            </p>
+                                            <p class="desc-en">
+                                                A customizable AI virtual avatar with tailored appearance, tone, and brand persona. Features text and voice interactions, real-time facial expressions, and multilingual dialogue—ideal for website reception, event guidance, product walkthroughs, and immersive brand experiences.
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- 幻燈片 3: 情緒分析應用 -->
+                            <div class="carousel-slide software-slide">
+                                <div class="project-showcase-card">
+                                    <div class="project-header">
+                                        <div class="project-title-group">
+                                            <h3 class="project-title">情緒分析與同理心溝通學習輔助</h3>
+                                            <span class="project-subtitle">AI-powered Sentiment Analysis & Empathetic
+                                                Communication System</span>
+                                        </div>
+                                        <div class="project-links">
+                                            <span class="tech-tag">Sentiment Analysis</span>
+                                            <span class="tech-tag">ChatGPT</span>
+                                        </div>
+                                    </div>
+                                    <div class="project-desc-layout">
+                                        <div class="software-media-wrapper">
+                                            <img src="img/ai-project-2.png" alt="情緒分析應用" class="software-preview-img">
+                                        </div>
+                                        <div class="project-info-desc">
+                                            <p class="desc-zh">結合人工智慧情緒分析應用與同理心溝通提升學習參與度、動機、成效，是一套分析學生情緒、融入同理心理論並結合
+                                                ChatGPT 的智慧系統軟體。</p>
+                                            <p class="desc-en">A software system that analyzes students' emotions,
+                                                incorporates empathetic communication theory, and utilizes ChatGPT to
+                                                enhance learning engagement, motivation, and academic outcomes.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- 幻燈片 4: 遊戲製作 · 家秘日記 -->
+                            <div class="carousel-slide software-slide">
+                                <div class="project-showcase-card">
+                                    <div class="project-header">
+                                        <div class="project-title-group">
+                                            <h3 class="project-title">遊戲製作 · 家秘日記</h3>
+                                            <span class="project-subtitle">Game Development · Family Secrets</span>
+                                        </div>
+                                        <div class="project-links">
+                                            <span class="tech-tag">Unity</span>
+                                            <span class="tech-tag">C#</span>
+                                            <a href="https://youtu.be/T8X3RoFHU9A?si=TgqKOxWG6oaqEsh-" target="_blank"
+                                                rel="noopener noreferrer" class="proj-btn yt-btn">
+                                                <svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor">
+                                                    <path
+                                                        d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z" />
+                                                </svg>
+                                                <span>YouTube Demo</span>
+                                            </a>
+                                        </div>
+                                    </div>
+                                    <div class="project-desc-layout">
+                                        <div class="software-media-wrapper">
+                                            <a href="https://youtu.be/T8X3RoFHU9A?si=TgqKOxWG6oaqEsh-" target="_blank"
+                                                style="display: block;">
+                                                <img src="img/game-ss.png" alt="遊戲製作 · 家秘日記" class="software-preview-img">
+                                            </a>
+                                        </div>
+                                        <div class="project-info-desc">
+                                            <p class="desc-zh">
+                                                家庭教育與兩性平權議題融入直覺遊戲設計之解謎專題。以沉浸式劇情與關卡引導玩家探索家庭互動關係，透過遊戲化體驗喚起對性別平權與家庭溝通的重視。
+                                            </p>
+                                            <p class="desc-en">
+                                                A narrative-driven puzzle game developed in Unity/C#, integrating family education and gender equality topics. Designed with immersive storytelling to encourage reflection on empathetic communication and gender equity.
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- 幻燈片 4: 學生成績分析與學習輔助系統 -->
+                            <div class="carousel-slide software-slide">
+                                <div class="project-showcase-card">
+                                    <div class="project-header">
+                                        <div class="project-title-group">
+                                            <h3 class="project-title">學生成績分析與學習輔助系統</h3>
+                                            <span class="project-subtitle">Student Performance Analysis & Learning
+                                                Support System</span>
+                                        </div>
+                                        <div class="project-links">
+                                            <span class="tech-tag">Python</span>
+                                            <span class="tech-tag">Web Integration</span>
+                                            <a href="https://youtu.be/YwdguEtwA9Y?si=20fu21m1Z7ptD-LX" target="_blank"
+                                                rel="noopener noreferrer" class="proj-btn yt-btn">
+                                                <svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor">
+                                                    <path
+                                                        d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z" />
+                                                </svg>
+                                                <span>YouTube Demo</span>
+                                            </a>
+                                        </div>
+                                    </div>
+                                    <div class="project-desc-layout">
+                                        <div class="software-media-wrapper">
+                                            <a href="https://youtu.be/YwdguEtwA9Y?si=20fu21m1Z7ptD-LX" target="_blank"
+                                                style="display: block;">
+                                                <img src="img/ai-project-1.png" alt="學生成績分析與學習輔助系統"
+                                                    class="software-preview-img">
+                                            </a>
+                                        </div>
+                                        <div class="project-info-desc">
+                                            <p class="desc-zh">在此AI應用系統，我主要負責學生功能之衝刺練習題（客製化學習輔助）製作與最後網站整合。</p>
+                                            <p class="desc-en">For this AI application system, I was primarily
+                                                responsible for developing the sprint practice exercises for students
+                                                (customized learning support) and integrating them into the final
+                                                website.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
+
             </div>
         </section>
-        
-        <section id="ai-application">
-            <div class="container">
-                <div class="sec-title-wrap">
-                    <img src="img/AI-title.png" alt="software" class="sec-title-img">
-                    <div class="sw-icons">
-                        <img src="img/ribbon2.png" class="ribbon-decor" alt="裝飾蝴蝶結">
-                    </div>
-                </div>
-        
-                <div class="ai-card">
-                    <div class="ai-preview-box">
-                        <a href="https://youtu.be/YwdguEtwA9Y?si=20fu21m1Z7ptD-LX" target="_blank" class="click-hint-link"><img src="img/ai-project-1.png" alt="學生成績分析系統"></a>
-                    </div>
-                    <div class="ai-info-box">
-                        <h3>學生成績分析與學習輔助系統</h3>
-                        <h4>Student Performance Analysis and Learning Support System</h4>
-                        <p>在此AI應用系統，我主要負責學生功能之衝刺練習題(客製化學習輔助)製作與最後網站整合</p>
-                        <p class="intro-en">For this AI application system, I was primarily responsible for developing the sprint practice exercises for students (customized learning support) and integrating them into the final website.</p>
-                    </div>
-                </div>
-        
-                <div class="ai-card ai-card-reverse">
-                    <div class="ai-preview-box">
-                        <img src="img/ai-project-2.png" alt="情緒分析應用">
-                    </div>
-                    <div class="ai-info-box">
-                        <h3>結合人工智慧情緒分析應用與同理心溝通提升學習參與度、動機、成效</h3>
-                        <h4>Enhancing learning engagement, motivation, and outcomes through the integration of AI-powered sentiment analysis and empathetic communication</h4>
-                        <p>一套分析學生的情緒、富同理心理論以及 ChatGPT 的系統軟體</p>
-                        <p class="intro-en">A software system that analyzes students' emotions, incorporates a theory of empathy, and utilizes ChatGPT</p>
-                    </div>
-                </div>
-            </div>
-        </section>
+
         <!-- 回到頂部按鈕 -->
-    <button id="backToTop" class="back-to-top" title="Go to top">↑</button>
+        <button id="backToTop" class="back-to-top" title="Go to top">↑</button>
 
-    <!-- 右下角漂浮社群連結 -->
-    <div class="social-floating">
-        <a href="https://www.instagram.com/eranyx.tw/" target="_blank" title="Instagram">
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg>
-        </a>
-        <a href="https://www.linkedin.com/in/et-lin-b3ab67382/" target="_blank" title="LinkedIn">
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path><rect x="2" y="9" width="4" height="12"></rect><circle cx="4" cy="4" r="2"></circle></svg>
-        </a>
-        <a href="mailto:etnyh0407@gmail.com" title="Email">
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
-        </a>
-        <a href="https://eranyx.com/" target="_blank" title="Company Website">
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><line x1="2" y1="12" x2="22" y2="12"></line><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path></svg>
-        </a>
-    </div>
+        <!-- 右下角漂浮社群連結 -->
+        <div class="social-floating">
+            <a href="https://www.instagram.com/eranyx.tw/" target="_blank" title="Instagram">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                    stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
+                    <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+                    <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
+                </svg>
+            </a>
+            <a href="https://www.linkedin.com/in/et-lin-b3ab67382/" target="_blank" title="LinkedIn">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                    stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path>
+                    <rect x="2" y="9" width="4" height="12"></rect>
+                    <circle cx="4" cy="4" r="2"></circle>
+                </svg>
+            </a>
+            <a href="mailto:et@eranyx.com" title="Email">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                    stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+                    <polyline points="22,6 12,13 2,6"></polyline>
+                </svg>
+            </a>
+            <a href="https://eranyx.com/" target="_blank" title="Company Website">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                    stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <circle cx="12" cy="12" r="10"></circle>
+                    <line x1="2" y1="12" x2="22" y2="12"></line>
+                    <path
+                        d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z">
+                    </path>
+                </svg>
+            </a>
+        </div>
 
-    <!-- 加入 JS 監聽滑動事件，滑到才顯示動畫 -->
-    <script>
-        const observer = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    entry.target.classList.add('active'); // 當元素進入畫面時，加上 active 觸發動畫
+        <!-- 加入 JS 監聽滑動事件，滑到才顯示動畫 -->
+        <script>
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('active'); // 當元素進入畫面時，加上 active 觸發動畫
+                    }
+                });
+            }, { threshold: 0.15 }); // 元素露出 15% 時觸發
+
+            // 選擇所有要滑動出現的元素 (標題、時間軸項目、底部打字文字)
+            document.querySelectorAll('.animate-title, .footer-text').forEach(el => {
+                observer.observe(el);
+            });
+
+            // 回到頂部按鈕 & 左側漂浮目錄功能
+            const backToTopBtn = document.getElementById('backToTop');
+            const floatingToc = document.getElementById('floating-toc');
+            const tocLinks = document.querySelectorAll('.floating-toc a');
+            const tocSections = document.querySelectorAll('header#experience, section#graphic, section#web, section#software');
+            let tocTimeout;
+            let isHoveringToc = false;
+
+            // 滑鼠移入目錄時保持顯示
+            if (floatingToc) {
+                floatingToc.addEventListener('mouseenter', () => {
+                    isHoveringToc = true;
+                    clearTimeout(tocTimeout);
+                });
+
+                // 滑鼠移出目錄時重新倒數隱藏
+                floatingToc.addEventListener('mouseleave', () => {
+                    isHoveringToc = false;
+                    tocTimeout = setTimeout(() => {
+                        floatingToc.classList.remove('show');
+                    }, 1200);
+                });
+            }
+
+            // 更新當前活躍章節標示
+            function updateActiveToc() {
+                const scrollPos = window.scrollY + 220;
+                let currentId = '';
+                tocSections.forEach(section => {
+                    if (section.offsetTop <= scrollPos) {
+                        currentId = section.getAttribute('id');
+                    }
+                });
+                tocLinks.forEach(link => {
+                    link.classList.toggle('active', link.getAttribute('href') === `#${currentId}`);
+                });
+            }
+
+            window.addEventListener('scroll', () => {
+                const currentScrollY = window.scrollY;
+
+                // 回到頂部按鈕 (超過 300px 顯示)
+                if (currentScrollY > 300) {
+                    backToTopBtn.classList.add('show');
+                } else {
+                    backToTopBtn.classList.remove('show');
+                }
+
+                // 左側目錄：上下滑動時顯示，停止滑動 1.5 秒後自動隱藏 (帶半透明效果不遮擋內容)
+                if (floatingToc) {
+                    if (currentScrollY > 150) {
+                        floatingToc.classList.add('show');
+                        updateActiveToc();
+                        clearTimeout(tocTimeout);
+                        if (!isHoveringToc) {
+                            tocTimeout = setTimeout(() => {
+                                floatingToc.classList.remove('show');
+                            }, 1500);
+                        }
+                    } else {
+                        if (!isHoveringToc) {
+                            floatingToc.classList.remove('show');
+                        }
+                    }
                 }
             });
-        }, { threshold: 0.15 }); // 元素露出 15% 時觸發
 
-        // 選擇所有要滑動出現的元素 (標題、時間軸項目、底部打字文字)
-        document.querySelectorAll('.animate-title, .footer-text').forEach(el => {
-            observer.observe(el);
-        });
+            backToTopBtn.addEventListener('click', () => {
+                window.scrollTo({ top: 0, behavior: 'smooth' }); // 平滑捲動到最上方
+            });
 
-        // 回到頂部按鈕功能
-        const backToTopBtn = document.getElementById('backToTop');
-        window.addEventListener('scroll', () => {
-            if (window.scrollY > 300) { // 當往下捲動超過 300px 時顯示按鈕
-                backToTopBtn.classList.add('show');
-            } else {
-                backToTopBtn.classList.remove('show');
+            // 經歷卡片點擊展開/收合描述
+            document.querySelectorAll('.exp-card').forEach(card => {
+                card.addEventListener('click', () => {
+                    card.classList.toggle('expanded');
+                });
+            });
+
+            // 平面設計垂直輪播控制 (Graphic Vertical Carousel)
+            let currentGraphicIndex = 0;
+            const graphicTrack = document.getElementById('graphicTrack');
+            const graphicViewport = document.getElementById('graphicViewport');
+            const graphicSlides = document.querySelectorAll('#graphicTrack .carousel-slide');
+            const graphicTabBtns = document.querySelectorAll('.graphic-tab-btn');
+            const graphicPrevBtn = document.getElementById('graphicPrevBtn');
+            const graphicNextBtn = document.getElementById('graphicNextBtn');
+            const totalGraphicSlides = graphicSlides.length;
+
+            function updateGraphicCarousel(index) {
+                if (index < 0) index = totalGraphicSlides - 1;
+                if (index >= totalGraphicSlides) index = 0;
+                currentGraphicIndex = index;
+
+                const targetSlide = graphicSlides[currentGraphicIndex];
+                if (graphicTrack && targetSlide) {
+                    graphicTrack.style.transform = `translateY(-${targetSlide.offsetTop}px)`;
+                }
+
+                graphicTabBtns.forEach((btn, idx) => {
+                    btn.classList.toggle('active', idx === currentGraphicIndex);
+                });
+
+                // 自動調整高度以貼合當前幻燈片
+                if (graphicViewport && targetSlide) {
+                    const slideHeight = targetSlide.offsetHeight;
+                    if (slideHeight > 0) {
+                        graphicViewport.style.height = `${slideHeight}px`;
+                    }
+                }
             }
-        });
-        backToTopBtn.addEventListener('click', () => {
-            window.scrollTo({ top: 0, behavior: 'smooth' }); // 平滑捲動到最上方
-        });
-    </script>
+
+            if (graphicPrevBtn) {
+                graphicPrevBtn.addEventListener('click', () => updateGraphicCarousel(currentGraphicIndex - 1));
+            }
+            if (graphicNextBtn) {
+                graphicNextBtn.addEventListener('click', () => updateGraphicCarousel(currentGraphicIndex + 1));
+            }
+            graphicTabBtns.forEach((btn, idx) => {
+                btn.addEventListener('click', () => updateGraphicCarousel(idx));
+            });
+
+            // 網頁設計垂直輪播控制 (Web Vertical Carousel)
+            let currentWebIndex = 0;
+            const webTrack = document.getElementById('webTrack');
+            const webViewport = document.getElementById('webViewport');
+            const webSlides = document.querySelectorAll('#webTrack .carousel-slide');
+            const webTabBtns = document.querySelectorAll('.web-tab-btn');
+            const webPrevBtn = document.getElementById('webPrevBtn');
+            const webNextBtn = document.getElementById('webNextBtn');
+            const totalWebSlides = webSlides.length;
+
+            function updateWebCarousel(index) {
+                if (index < 0) index = totalWebSlides - 1;
+                if (index >= totalWebSlides) index = 0;
+                currentWebIndex = index;
+
+                const targetSlide = webSlides[currentWebIndex];
+                if (webTrack && targetSlide) {
+                    webTrack.style.transform = `translateY(-${targetSlide.offsetTop}px)`;
+                }
+
+                webTabBtns.forEach((btn, idx) => {
+                    btn.classList.toggle('active', idx === currentWebIndex);
+                });
+
+                // 自動調整高度以貼合當前幻燈片
+                if (webViewport && targetSlide) {
+                    const slideHeight = targetSlide.offsetHeight;
+                    if (slideHeight > 0) {
+                        webViewport.style.height = `${slideHeight}px`;
+                    }
+                }
+            }
+
+            if (webPrevBtn) {
+                webPrevBtn.addEventListener('click', () => updateWebCarousel(currentWebIndex - 1));
+            }
+            if (webNextBtn) {
+                webNextBtn.addEventListener('click', () => updateWebCarousel(currentWebIndex + 1));
+            }
+            webTabBtns.forEach((btn, idx) => {
+                btn.addEventListener('click', () => updateWebCarousel(idx));
+            });
+
+            // 軟體開發與AI應用垂直輪播控制 (Software & AI Vertical Carousel)
+            let currentSoftwareIndex = 0;
+            const softwareTrack = document.getElementById('softwareTrack');
+            const softwareViewport = document.getElementById('softwareViewport');
+            const softwareSlides = document.querySelectorAll('#softwareTrack .carousel-slide');
+            const softwareTabBtns = document.querySelectorAll('.software-tab-btn');
+            const softwarePrevBtn = document.getElementById('softwarePrevBtn');
+            const softwareNextBtn = document.getElementById('softwareNextBtn');
+            const totalSoftwareSlides = softwareSlides.length;
+
+            function updateSoftwareCarousel(index) {
+                if (index < 0) index = totalSoftwareSlides - 1;
+                if (index >= totalSoftwareSlides) index = 0;
+                currentSoftwareIndex = index;
+
+                const targetSlide = softwareSlides[currentSoftwareIndex];
+                if (softwareTrack && targetSlide) {
+                    softwareTrack.style.transform = `translateY(-${targetSlide.offsetTop}px)`;
+                }
+
+                softwareTabBtns.forEach((btn, idx) => {
+                    btn.classList.toggle('active', idx === currentSoftwareIndex);
+                });
+
+                // 自動調整高度以貼合當前幻燈片
+                if (softwareViewport && targetSlide) {
+                    const slideHeight = targetSlide.offsetHeight;
+                    if (slideHeight > 0) {
+                        softwareViewport.style.height = `${slideHeight}px`;
+                    }
+                }
+            }
+
+            if (softwarePrevBtn) {
+                softwarePrevBtn.addEventListener('click', () => updateSoftwareCarousel(currentSoftwareIndex - 1));
+            }
+            if (softwareNextBtn) {
+                softwareNextBtn.addEventListener('click', () => updateSoftwareCarousel(currentSoftwareIndex + 1));
+            }
+            softwareTabBtns.forEach((btn, idx) => {
+                btn.addEventListener('click', () => updateSoftwareCarousel(idx));
+            });
+
+            // 初始化所有輪播 (圖片載入完成後與視窗縮放時重新校正位置與高度)
+            function initCarousels() {
+                updateGraphicCarousel(currentGraphicIndex);
+                updateWebCarousel(currentWebIndex);
+                updateSoftwareCarousel(currentSoftwareIndex);
+            }
+            window.addEventListener('load', initCarousels);
+            window.addEventListener('resize', initCarousels);
+            setTimeout(initCarousels, 50);
+            setTimeout(initCarousels, 300);
+        </script>
 
 </body>
+
 </html>
